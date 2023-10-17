@@ -10,7 +10,7 @@ jobs:
 
       - name: Running custom actions
         id: custom_step
-        uses: ./.github/actions/recommneded_testing_actions
+        uses: ./.github/actions/docker_custom_action_python
         with:
           num1: 10
           num2: 15
