@@ -11,7 +11,7 @@ jobs:
         id: comp
         uses: ./.github/actions/composite-action
         with:
-          name: "samir"
+          name: "shamsoddin"
 
       - name: print variable output value
         run: echo "output value is - ${{ steps.comp.outputs.number }}"
