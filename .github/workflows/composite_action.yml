@@ -9,7 +9,7 @@ jobs:
 
       - name: calling composite custom action
         id: comp
-        uses: ./.github/actions/composite-action
+        uses: ./.github/actions/test_composite_action
         with:
           name: "shamsoddin"
 
