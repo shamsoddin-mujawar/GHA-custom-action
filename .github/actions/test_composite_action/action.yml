@@ -14,7 +14,7 @@ runs:
   steps:
     - name: print name
       run: |
-        echo "Name is - ${{ inputs.name }}"
+        echo "Enter name is - ${{ inputs.name }}"
       shell: bash
 
     - name: print github_env variable value
