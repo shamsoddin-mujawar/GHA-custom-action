@@ -1,0 +1,13 @@
+name: 'JAVASCRIPT ACTION'
+description: 'TESTING JAVASCRIPT ACTIONS'
+inputs:
+  name:
+    description: 'Enter the name'
+    required: true
+    default: 'test'
+outputs:
+  user_name:
+    description: 'store the output name'
+runs:
+  using: 'node20'
+  main: 'index.js'
