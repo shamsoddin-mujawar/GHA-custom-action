@@ -10,7 +10,7 @@ jobs:
 
       - name: perform addition
         id: addition_custom
-        uses: ./.github/actions/use_github_env_variable
+        uses: ./.github/actions/docker_custom_action_bash
         with:
           var1: 15
           var2: 15
