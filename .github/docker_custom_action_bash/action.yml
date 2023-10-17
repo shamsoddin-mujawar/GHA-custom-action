@@ -1,0 +1,17 @@
+name: "Docker Custome action using bash"
+description: "performing addition of two numbers using bash script"
+inputs:
+  var1:
+    description: "First number"
+    required: true
+    default: "1"
+  var2:
+    description: "Second number"
+    required: true
+    default: "2"
+outputs:
+  sum:
+    description: 'store the result of above two numbers'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
