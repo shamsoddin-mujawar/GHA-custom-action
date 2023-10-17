@@ -1,0 +1,17 @@
+name: "Docker Custom Actions using python"
+description: "Testing Docker custom actions using python"
+inputs:
+  num1:
+    description: "Enter num1"
+    required: true
+    default: ""
+  num2:
+    description: "Enter num2"
+    required: true
+    default: ""
+outputs:
+  res:
+    description: "store the result of 'num1' and 'num2' "
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
