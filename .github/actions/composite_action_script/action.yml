@@ -32,4 +32,4 @@ runs:
       id: calculator
       shell: bash
       run: |
-        python3 calculation.py
+        python3 ${{ github.action_path }}/calculation.py
