@@ -1,0 +1,20 @@
+name: "TESTING_COMPOSITE_ALERT"
+on: workflow_dispatch
+jobs:
+  test:
+    name: TEST_COMPOSITE
+    runs-on: ubuntu-latest
+    steps:
+      - name: "checkout repository"
+        uses: actions/checkout@v4
+
+      - name: calling_custom_action
+        id: custom_action
+        uses: ./.github/actions/composite_action_script
+        with:
+          A: 2
+          B: 3
+
+      - name: printing result of calling_custom_action
+        run: |
+          echo "addition is - ${{ steps.custom_action.outputs.addition }}
