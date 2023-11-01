@@ -1,8 +1,7 @@
-name: "TESTING_COMPOSITE_ALERT"
+name: "TESTING_COMPOSITE_SCRIPT"
 on: workflow_dispatch
 jobs:
   test:
-    name: TEST_COMPOSITE
     runs-on: ubuntu-latest
     steps:
       - name: "checkout repository"
