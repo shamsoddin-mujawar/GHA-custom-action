@@ -11,8 +11,8 @@ jobs:
         id: custom_action
         uses: ./.github/actions/composite_action_script
         with:
-          A: 2
-          B: 3
+          A: 4
+          B: 2
 
       - name: printing result of calling_custom_action
         run: |
