@@ -1,0 +1,35 @@
+name: "RUNNING CUSTOM ACTIONS"
+description: "TESTING GITHUB CUSTOM COMPOSITE ACTION WITH PYTHON SCRIPT"
+inputs:
+  A:
+    description: "Value of A..."
+    required: true
+  B:
+    description: "Value of B..."
+    required: true
+outputs:
+  addition:
+    description: "Stored addition of two variables..."
+    value: ${{ steps.calculator.outputs.addition }}
+  subtract:
+    description: "Stored subtraction of two variables..."
+    value: ${{ steps.calculator.outputs.subtract }}
+  multiply:
+    description: "Stored multiply of two variables..."
+    value: ${{ steps.calculator.outputs.multiply }}
+  division:
+    description: "Stored division of two variables..."
+    value: ${{ steps.calculator.outputs.division }}
+runs:
+  using: composite
+  steps:
+    - name: print the input value
+      run: |
+        echo " Value A is - ${{ inputs.A }}  and B is - ${{ inputs.B }}"
+      shell: bash
+
+    - name: Executing python script
+      id: calculator
+      shell: bash
+      run: |
+        python3 calculation.py
