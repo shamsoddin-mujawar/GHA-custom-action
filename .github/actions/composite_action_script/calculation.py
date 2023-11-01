@@ -13,8 +13,8 @@ def multiplication(num1: int, num2: int) -> int:
     return num1 * num2
 
 
-# def divi(num1: int, num2: int) -> float:
-#     return num1 // num2
+def divi(num1: int, num2: int) -> float:
+    return num1 / num2
 
 
 def main():
@@ -24,13 +24,12 @@ def main():
     add = addition(num1, num2)
     sub = substraction(num1, num2)
     mul = multiplication(num1, num2)
-    # div = divi(num1, num2)
-    print("add - {}, sub - {} , and mul - {} ".format(add, sub, mul))
+    div = divi(num1, num2)
     with open(os.getenv("GITHUB_OUTPUT"), 'a') as fp:
         fp.write("addition={}\n".format(add))
         fp.write("subtract={}\n".format(sub))
         fp.write("multiply={}\n".format(mul))
-        # fp.write("division={}\n".format(div))
+        fp.write("division={}\n".format(div))
 
 
 if __name__ == '__main__':
