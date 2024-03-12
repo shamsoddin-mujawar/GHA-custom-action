@@ -1,4 +1,4 @@
-name: "Wait for an approval"
+name: "WAIT FOR A REVIEWERS APPROVAL"
 on: workflow_dispatch
 jobs:
   test:
