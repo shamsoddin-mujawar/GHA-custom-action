@@ -1,0 +1,17 @@
+name: "Wait for an approval"
+on: workflow_dispatch
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print hello
+        run: |
+          echo "Test"
+          
+  build:
+    runs-on: ubuntu-latest
+    environment: prod
+    steps:
+      - name: build
+        run: |
+          echo "build"
