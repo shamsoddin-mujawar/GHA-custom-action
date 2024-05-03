@@ -19,7 +19,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: shamsoddin786/box:igr
+          tags: shamsoddin786/bo:igr
           file: ./Docker/ingress/Dockerfile
 
 
