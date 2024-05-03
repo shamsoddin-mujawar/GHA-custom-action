@@ -1,0 +1,32 @@
+name: build and push docker image on DockerHub
+on:
+  workflow_dispatch:
+jobs:
+  push-docker-image:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+
+      - name: Build and push
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: shamsoddin786/box:igr
+          file: ./Docker/ingress/Dockerfile
+
+
+      - name: Build and push
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: shamsoddin786/box:ir
+          file: ./Docker/ir/Dockerfile
