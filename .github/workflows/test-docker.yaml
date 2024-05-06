@@ -18,7 +18,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          # push: true
+          push: true
           tags: shamsoddin786/box:igr
           file: ./Docker/ingress/Dockerfile
 
@@ -27,6 +27,6 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          # push: true
+          push: true
           tags: shamsoddin786/box:ir
           file: ./Docker/ir/Dockerfile
